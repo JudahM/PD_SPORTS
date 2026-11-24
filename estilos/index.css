@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;600;700;800&display=swap');
+
+:root {
+  /* Paleta do Design System */
+  --cor-primaria: #C6FF00;
+  --cor-preto: #111111;
+  --cor-branco: #FFFFFF;
+  --cor-cinza-claro: #D4D4D4;
+  --cor-cinza-medio: #C5C5C5;
+  --cor-cinza-escuro: #666;
+
+  /* Fontes do Design System */
+  --fonte-paragrafo: 'Work Sans', sans-serif;
+  --fonte-destaque: 'Space Mono', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-destaque);
+  background-color: var(--cor-branco);
+  color: var(--cor-preto);
+  width: 100%;
+}
+
+/* =========================================
+   1. CABEÇALHO E NAVEGAÇÃO
+   ========================================= */
+.topo {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: var(--cor-branco);
+}
+
+.topo-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--fonte-paragrafo);
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--cor-preto);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.icones-acao {
+  display: flex;
+  gap: 16px;
+}
+
+.icones-acao a {
+  color: var(--cor-preto);
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.barra-busca {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--cor-cinza-fundo);
+  border: 1px solid var(--cor-cinza-claro);
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.barra-busca i {
+  font-size: 14px;
+  color: var(--cor-preto);
+}
+
+.barra-busca input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-family: var(--fonte-destaque);
+  font-size: 11px;
+  color: var(--cor-preto);
+  outline: none;
+}
+
+.categorias-pilulas ul {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.categorias-pilulas ul::-webkit-scrollbar {
+  display: none;
+}
+
+.categorias-pilulas a {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid var(--cor-preto);
+  border-radius: 999px;
+  font-family: var(--fonte-destaque);
+  font-size: 10px;
+  color: var(--cor-preto);
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: var(--fonte-paragrafo);
+}
+
+.categorias-pilulas a.ativo {
+  background-color: var(--cor-primaria);
+  font-weight: 700;
+}
+
+/* =========================================
+   2. BANNER HERO
+   ========================================= */
+.banner-hero {
+  background: linear-gradient(180deg, rgba(10, 35, 55, 0.72) 0%, rgba(10, 15, 20, 0.9) 100%),
+              url('../imagens/banner/banner.jpg') center/cover no-repeat;
+  color: var(--cor-branco);
+  padding: 72px 16px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.banner-hero h1 {
+  font-family: var(--fonte-paragrafo);
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 700;
+}
+
+.banner-hero p {
+  font-family: var(--fonte-destaque);
+  font-size: 10px;
+  line-height: 14px;
+  color: #E0E0E0;
+  margin-bottom: 4px;
+}
+
+.btn-primario {
+  display: inline-block;
+  background-color: var(--cor-primaria);
+  color: var(--cor-preto);
+  font-family: var(--fonte-destaque);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+}
+
+/* =========================================
+   3. ENCONTRE SEU ESPORTE
+   ========================================= */
+.secao-esportes {
+  padding: 18px 16px 10px;
+}
+
+.secao-esportes h2 {
+  font-family: var(--fonte-destaque);
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--cor-cinza-escuro);
+  margin-bottom: 10px;
+}
+
+.lista-esportes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  list-style: none;
+}
+
+.lista-esportes a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: var(--cor-cinza-escuro);
+  font-family: var(--fonte-destaque);
+  font-size: 10px;
+}
+
+.lista-esportes img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: var(--cor-cinza-claro);
+}
+
+/* =========================================
+   4. PRODUTOS EM DESTAQUE
+   ========================================= */
+.secao-produtos {
+  padding: 14px 16px;
+}
+
+.secao-produtos h2 {
+  font-family: var(--fonte-destaque);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.grade-produtos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.card-produto {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-produto figure {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.05;
+  background-color: var(--cor-cinza-claro);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-produto figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-favorito {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--cor-branco);
+  color: var(--cor-preto);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.card-produto h3 {
+  font-family: var(--fonte-destaque);
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: 400;
+  color: var(--cor-cinza-escuro);
+}
+
+.card-produto .preco {
+  font-family: var(--fonte-destaque);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--cor-preto);
+  margin-top: auto;
+}
+
+.btn-adicionar {
+  width: 100%;
+  padding: 8px 6px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--cor-primaria);
+  color: var(--cor-preto);
+  font-family: var(--fonte-destaque);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* =========================================
+   5. INSPIRE-SE E MONTE SEU OUTFIT
+   ========================================= */
+.secao-inspire {
+  padding: 18px 16px 28px;
+}
+
+.secao-inspire h2 {
+  font-family: var(--fonte-destaque);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.grade-outfits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.card-outfit {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-outfit img {
+  width: 100%;
+  aspect-ratio: 3 / 4.2;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: var(--cor-cinza-claro);
+}
+
+.card-outfit h3 {
+  font-family: var(--fonte-destaque);
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.card-outfit p {
+  font-family: var(--fonte-destaque);
+  font-size: 9px;
+  line-height: 12px;
+  color: var(--cor-cinza-escuro);
+}
+
+/* =========================================
+   6. RODAPÉ
+   ========================================= */
+.rodape {
+  background-color: var(--cor-preto);
+  color: var(--cor-branco);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.rodape-colunas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.rodape nav h4 {
+  font-family: var(--fonte-paragrafo);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--cor-primaria);
+  margin-bottom: 10px;
+}
+
+.rodape nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rodape nav a {
+  font-family: var(--fonte-paragrafo);
+  color: var(--cor-cinza-medio);
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.rodape hr {
+  border: none;
+  border-top: 1px solid #444444;
+}
+
+.rodape-base {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rodape-base .marca {
+  font-family: var(--fonte-paragrafo);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cor-primaria);
+}
+
+.rodape-base small {
+  font-family: var(--fonte-paragrafo);
+  font-size: 10px;
+  color: var(--cor-primaria);
+}
+
+.links-legais {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--fonte-paragrafo);
+  font-size: 10px;
+  color: var(--cor-primaria);
+}
+
+.links-legais a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+}
