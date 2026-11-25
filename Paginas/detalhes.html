@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PD Sports</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../estilo/detalhes.css">
+</head>
+<body>
+    <header class="topo">
+        <section class="topo-superior">
+        <a href="#" class="logo">PD SPORTS</a>
+        <nav class="icones-acao" aria-label="Menu do usuário">
+            <a href="#" aria-label="Favoritos"><i class="bi bi-heart"></i></a>
+            <a href="#" aria-label="Minha conta"><i class="bi bi-person"></i></a>
+            <a href="#" aria-label="Carrinho"><i class="bi bi-cart2"></i></a>
+        </nav>
+        </section>
+
+        <form class="barra-busca" role="search">
+        <i class="bi bi-search"></i>
+        <input type="search" placeholder="O que você está procurando?" aria-label="Buscar produtos">
+        </form>
+
+        <nav class="categorias-pilulas" aria-label="Categorias rápidas">
+        <ul>
+            <li><a href="#" class="ativo">Tênis</a></li>
+            <li><a href="#">Futebol</a></li>
+            <li><a href="#">Basquete</a></li>
+            <li><a href="#">Corrida</a></li>
+            <li><a href="#">Pilates</a></li>
+            <li><a href="#">Vôlei</a></li>
+            <li><a href="#">Pedal</a></li>
+            <li><a href="#">Beach Tênis</a></li>
+            <li><a href="#">Natação</a></li>
+            <li><a href="#">Ping Pong</a></li>
+            <li><a href="#">Tiro ao Alvo</a></li>
+            <li><a href="#">Artes Marciais</a></li>
+            <li><a href="#">Ciclismo</a></li>
+            <li><a href="#">Surf</a></li>
+            <li><a href="#">Golf</a></li>
+            
+        </ul>
+        </nav>
+    </header>
+
+    <main class="conteudo-produto">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Caminho de navegação">
+            <ol>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Calçados</a></li>
+                <li><a href="#">Corrida</a></li>
+                <li aria-current="page">Tênis Movimento</li>
+            </ol>
+        </nav>
+
+        <!-- Galeria do Produto -->
+        <section class="galeria-produto" aria-label="Fotos do produto">
+            <figure class="foto-principal">
+                <img src="../imagens/tenis-principal.png" alt="Tênis de corrida Movimento cinza vista lateral">
+                <figcaption class="contador-fotos">1 / 4</figcaption>
+            </figure>
+
+            <ul class="miniaturas">
+                <li>
+                    <button type="button" class="ativa" aria-label="Ver foto 1">
+                        <img src="../imagens/tenis-thumb-1.png" alt="Vista lateral">
+                    </button>
+                </li>
+                <li>
+                    <button type="button" aria-label="Ver foto 2">
+                        <img src="../imagens/tenis-thumb-2.png" alt="Vista superior">
+                    </button>
+                </li>
+                <li>
+                    <button type="button" aria-label="Ver foto 3">
+                        <img src="../imagens/tenis-thumb-3.png" alt="Vista do solado">
+                    </button>
+                </li>
+                <li>
+                    <button type="button" aria-label="Ver foto 4">
+                        <img src="../imagens/tenis-thumb-4.png" alt="Detalhe do cabedal">
+                    </button>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Cabeçalho do Produto -->
+        <section class="cabecalho-produto">
+            <p class="meta-produto">CORRIDA &bull; REF. 100245</p>
+            <h1>Tênis de corrida Movimento unissex</h1>
+
+            <p class="resumo-estrelas">
+                <span class="estrelas" aria-label="Nota 4,6 de 5">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                </span>
+                <strong>4,6</strong>
+                <span>&bull; 128 avaliações</span>
+            </p>
+
+            <p class="subtitulo-produto">Conforto e leveza para acompanhar seu ritmo.</p>
+
+            <ul class="destaques-produto">
+                <li>Amortecimento em EVA para treinos diários</li>
+                <li>Cabedal respirável e ajuste com cadarço</li>
+                <li>Solado de borracha com boa aderência</li>
+            </ul>
+        </section>
+
+        <!-- Caixa de Compra -->
+        <section class="caixa-compra" aria-label="Opções de compra">
+            <article class="card-preco">
+                <section class="valores">
+                    <del>De R$ 249,90</del>
+                    <strong class="preco-atual">R$ 199,90</strong>
+                    <small>ou 3x de R$ 99,95 sem juros</small>
+                </section>
+                <mark class="tag-desconto">20% OFF</mark>
+            </article>
+
+            <!-- Seleção de Cor -->
+            <fieldset class="seletor-cor">
+                <legend>Cor: <strong>Cinza</strong></legend>
+                <label class="opcao-cor cor-cinza">
+                    <input type="radio" name="cor" value="cinza" checked>
+                    <span aria-label="Cinza"></span>
+                </label>
+                <label class="opcao-cor cor-preto">
+                    <input type="radio" name="cor" value="preto">
+                    <span aria-label="Preto"></span>
+                </label>
+                <label class="opcao-cor cor-branco">
+                    <input type="radio" name="cor" value="branco">
+                    <span aria-label="Branco"></span>
+                </label>
+            </fieldset>
+
+            <!-- Seleção de Tamanho -->
+            <fieldset class="seletor-tamanho">
+                <legend>Tamanho: <strong>40</strong></legend>
+                <ul class="grade-tamanhos">
+                    <li>
+                        <label>
+                            <input type="radio" name="tamanho" value="36">
+                            <span>36</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="tamanho" value="37">
+                            <span>37</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="tamanho" value="38">
+                            <span>38</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="tamanho" value="39">
+                            <span>39</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="tamanho" value="40" checked>
+                            <span>40</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="tamanho" value="41">
+                            <span>41</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="tamanho" value="42">
+                            <span>42</span>
+                        </label>
+                    </li>
+                </ul>
+                <a href="#" class="link-medidas">Tabela de medidas</a>
+            </fieldset>
+
+            <!-- Cálculo de Frete -->
+            <form class="form-frete">
+                <label for="cep">Calcule o frete e o prazo de entrega</label>
+                <fieldset class="campo-cep">
+                    <input type="text" id="cep" placeholder="Digite seu CEP" maxlength="9">
+                    <button type="submit">Calcular</button>
+                </fieldset>
+                <a href="#" class="link-cep">Não sei meu CEP</a>
+            </form>
+
+            <!-- Botões de Ação -->
+            <section class="acoes-compra">
+                <button type="button" class="btn-primario">Comprar agora</button>
+                <button type="button" class="btn-secundario">Adicionar ao carrinho</button>
+            </section>
+
+            <p class="info-entrega">Vendido e entregue por Loja Esporte. Troca gratuita em até 30 dias.</p>
+        </section>
+
+        <!-- Sobre o Produto -->
+        <section class="sobre-produto">
+            <h2>Sobre o produto</h2>
+            <p>
+                Do primeiro quilômetro à rotina de treinos, o Movimento combina leveza, ventilação e amortecimento. Um tênis versátil para corridas leves, caminhadas e atividades do dia a dia.
+            </p>
+        </section>
+
+        <!-- Avaliações de Clientes -->
+        <section class="avaliacoes-clientes">
+            <h2>Avaliações de clientes</h2>
+
+            <header class="nota-geral">
+                <strong class="nota-numero">4,6 / 5</strong>
+                <section class="nota-detalhe">
+                    <span class="estrelas" aria-hidden="true">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </span>
+                    <small>Baseado em 128 avaliações</small>
+                </section>
+            </header>
+
+            <ul class="metricas-avaliacao">
+                <li>
+                    <label for="metrica-conforto">
+                        <span>Conforto</span>
+                        <span>4,7 / 5</span>
+                    </label>
+                    <progress id="metrica-conforto" value="4.7" max="5">4,7 de 5</progress>
+                </li>
+                <li>
+                    <label for="metrica-amortecimento">
+                        <span>Amortecimento</span>
+                        <span>4,5 / 5</span>
+                    </label>
+                    <progress id="metrica-amortecimento" value="4.5" max="5">4,5 de 5</progress>
+                </li>
+                <li>
+                    <label for="metrica-aderencia">
+                        <span>Aderência</span>
+                        <span>4,6 / 5</span>
+                    </label>
+                    <progress id="metrica-aderencia" value="4.6" max="5">4,6 de 5</progress>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <section class="rodape-colunas">
+        <nav aria-label="Minha Conta">
+            <h4>Minha Conta</h4>
+            <ul>
+            <li><a href="#">Meus pedidos</a></li>
+            <li><a href="#">Meus dados</a></li>
+            <li><a href="#">Favoritos</a></li>
+            </ul>
+        </nav>
+
+        <nav aria-label="Redes Sociais">
+            <h4>Redes Sociais</h4>
+            <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">YouTube</a></li>
+            </ul>
+        </nav>
+        </section>
+
+        <hr>
+
+        <section class="rodape-base">
+        <p class="marca">LOJA ESPORTE</p>
+        <small>© 2026 Loja Esporte. Todos os direitos reservados.</small>
+        <nav class="links-legais" aria-label="Links legais">
+            <a href="#">Privacidade</a>
+            <span>•</span>
+            <a href="#">Termos de uso</a>
+        </nav>
+        </section>
+    </footer>
+
+</body>
+</html>
