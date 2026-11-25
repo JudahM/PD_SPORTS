@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Painel administrativo da PD SPORTS para organizar e cadastrar produtos.">
+  <title>Gerenciar Produtos | PD SPORTS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/administrativo.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="admin-header">
+    <div class="admin-header__top">
+      <a class="brand-logo" href="index.html" aria-label="PD SPORTS — voltar à loja">PD SPORTS</a>
+      <button class="account-button" type="button" aria-label="Minha conta">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"></circle>
+          <circle cx="12" cy="9" r="3.2"></circle>
+          <path d="M5.8 18.3a6.3 6.3 0 0 1 12.4 0"></path>
+        </svg>
+      </button>
+    </div>
+    <p class="admin-header__title">Painel Administrativo</p>
+    <a class="back-link" href="index.html">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 5-7 7 7 7M3 12h18"></path></svg>
+      Voltar à loja
+    </a>
+  </header>
+
+  <main id="conteudo" class="admin-main">
+    <section class="product-management" aria-labelledby="management-title">
+      <header class="section-heading">
+        <h1 id="management-title">Gerenciar Produtos</h1>
+        <p>Organize seu catálogo em um só lugar.</p>
+      </header>
+
+      <form class="catalog-filters" role="search">
+        <div class="catalog-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg>
+          <label class="visually-hidden" for="product-search">Buscar produto ou ID</label>
+          <input id="product-search" name="busca" type="search" placeholder="Buscar produto ou ID">
+        </div>
+        <label class="visually-hidden" for="category-filter">Filtrar por categoria</label>
+        <select class="category-filter" id="category-filter" name="categoria">
+          <option value="">Categoria</option>
+          <option value="camisas">Camisas</option>
+          <option value="shorts">Shorts</option>
+          <option value="calcados">Calçados</option>
+          <option value="acessorios">Acessórios</option>
+        </select>
+      </form>
+
+      <a class="button button--primary new-product-link" href="#cadastro-produto">
+        Novo Produto
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
+      </a>
+
+      <dl class="catalog-statistics" aria-label="Resumo do catálogo">
+        <div class="statistic-card">
+          <dt>Total de Produtos</dt>
+          <dd>3</dd>
+        </div>
+        <div class="statistic-card">
+          <dt>Estoque Baixo</dt>
+          <dd>1</dd>
+        </div>
+      </dl>
+
+      <header class="catalog-results">
+        <h2>3 produtos</h2>
+        <p>Mais recentes</p>
+      </header>
+
+      <ul class="product-list">
+        <li>
+          <article class="product-card" aria-labelledby="product-title">
+            <img class="product-card__image" src="assets/images/camisa-futebol-admin.png" alt="Camisa de futebol branca com detalhes azuis nos ombros e cinco estrelas no peito" width="680" height="310">
+            <div class="product-card__content">
+              <h3 id="product-title">Camisa de Futebol</h3>
+              <div class="product-card__details">
+                <p class="product-card__price">R$ 129,90</p>
+                <p class="product-card__stock">Estoque: 24 unidades</p>
+              </div>
+              <div class="product-card__actions">
+                <a class="button button--outline" href="#nome-produto">Editar</a>
+                <button class="button button--outline" type="button">Excluir</button>
+              </div>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section class="product-registration" id="cadastro-produto" aria-labelledby="registration-title">
+      <header class="registration-heading">
+        <h2 id="registration-title">Cadastrar Produto</h2>
+        <p>Adicione um novo item ao seu catálogo.</p>
+        <small>* Campos obrigatórios</small>
+      </header>
+
+      <form class="product-form">
+        <fieldset class="product-information">
+          <legend>Informações</legend>
+          <p class="fieldset-description">Os dados principais que o cliente vai encontrar.</p>
+
+          <div class="form-fields">
+            <div class="form-field">
+              <label for="nome-produto">Nome do produto <span aria-hidden="true">*</span></label>
+              <input id="nome-produto" name="nome" type="text" placeholder="Ex.: Camisa de Futebol" required>
+            </div>
+
+            <div class="form-field">
+              <label for="preco-produto">Preço</label>
+              <input id="preco-produto" name="preco" type="text" inputmode="decimal" placeholder="Ex.: R$ 290,00">
+            </div>
+
+            <div class="form-field">
+              <label for="descricao-produto">Descrição <span aria-hidden="true">*</span></label>
+              <textarea id="descricao-produto" name="descricao" rows="1" placeholder="Descreva o produto e seus benefícios..." required></textarea>
+            </div>
+
+            <div class="form-field">
+              <label for="categoria-produto">Categoria <span aria-hidden="true">*</span></label>
+              <select id="categoria-produto" name="categoria" required>
+                <option value="" disabled selected>Selecione uma categoria</option>
+                <option value="camisas">Camisas</option>
+                <option value="shorts">Shorts</option>
+                <option value="calcados">Calçados</option>
+                <option value="acessorios">Acessórios</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="modalidade-produto">Modalidade <span aria-hidden="true">*</span></label>
+              <select id="modalidade-produto" name="modalidade" required>
+                <option value="" disabled selected>Selecione uma modalidade</option>
+                <option value="futebol">Futebol</option>
+                <option value="corrida">Corrida</option>
+                <option value="treino">Treino</option>
+                <option value="basquete">Basquete</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="destaque-produto">Destaque</label>
+              <select id="destaque-produto" name="destaque">
+                <option value="" disabled selected>Deixar em destaque ?</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="product-images">
+          <legend>Imagens</legend>
+          <p class="fieldset-description" id="image-order-help">A primeira imagem será a capa do produto.</p>
+
+          <label class="image-upload" for="imagens-produto">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V4m-7 7 7-7 7 7"></path></svg>
+            <span>Toque para adicionar imagens</span>
+            <small id="image-format-help">JPG ou PNG · até 5 MB por imagem</small>
+            <input id="imagens-produto" name="imagens" type="file" accept=".jpg,.jpeg,.png,image/jpeg,image/png" multiple aria-describedby="image-order-help image-format-help">
+          </label>
+
+          <ol class="image-placeholders" aria-label="Espaços reservados para as imagens dos produtos">
+            <li>Imagem 1</li>
+            <li>Imagem 2</li>
+            <li>Imagem 3</li>
+          </ol>
+        </fieldset>
+
+        <div class="form-actions">
+          <button class="button button--outline" type="reset">Cancelar</button>
+          <button class="button button--primary" type="button">Salvar Rascunho</button>
+        </div>
+        <button class="button button--primary register-button" type="button">Cadastrar Produto</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__content">
+      <nav class="footer-navigation" aria-label="Links do rodapé">
+        <section aria-labelledby="account-title">
+          <h2 id="account-title">Minha Conta</h2>
+          <ul>
+            <li><button type="button">Meus pedidos</button></li>
+            <li><button type="button">Meus dados</button></li>
+            <li><button type="button">Favoritos</button></li>
+          </ul>
+        </section>
+        <section aria-labelledby="social-title">
+          <h2 id="social-title">Redes Sociais</h2>
+          <ul>
+            <li><button type="button">Instagram</button></li>
+            <li><button type="button">Facebook</button></li>
+            <li><button type="button">YouTube</button></li>
+          </ul>
+        </section>
+      </nav>
+      <section class="footer-legal" aria-labelledby="store-title">
+        <h2 id="store-title">LOJA ESPORTE</h2>
+        <p>© 2026 Loja Esporte. Todos os direitos reservados.</p>
+        <nav aria-label="Informações legais">
+          <button type="button">Privacidade</button>
+          <span aria-hidden="true"> · </span>
+          <button type="button">Termos de uso</button>
+        </nav>
+      </section>
+    </div>
+  </footer>
+</body>
+</html>
