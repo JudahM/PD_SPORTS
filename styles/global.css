@@ -1,0 +1,8 @@
+/* Cores e Tipografia */
+:root {
+  --color-text: #000000;
+  --color-muted: #777777;
+  --color-accent: #C6FF00;
+  --font-body: "Inconsolata", monospace;
+  --page-width: 960px;
+}
