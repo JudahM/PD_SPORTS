@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PD Sports</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="estilos/index.css">
+    <link rel="stylesheet" href="Styles/PaginaInicial.css">
 </head>
 <body>
  <header class="topo">
     <section class="topo-superior">
-      <a href="#" class="logo">PD SPORTS</a>
+      <a href="index.html" class="logo">PD SPORTS</a>
       <nav class="icones-acao" aria-label="Menu do usuário">
         <a href="#" aria-label="Favoritos"><i class="bi bi-heart"></i></a>
-        <a href="#" aria-label="Minha conta"><i class="bi bi-person"></i></a>
-        <a href="#" aria-label="Carrinho"><i class="bi bi-cart2"></i></a>
+        <a href="Paginas/area-adm.html" aria-label="Minha conta"><i class="bi bi-person"></i></a>
+        <a href="Paginas/carrinho.html" aria-label="Carrinho"><i class="bi bi-cart2"></i></a>
       </nav>
     </section>
 
@@ -25,21 +25,21 @@
 
     <nav class="categorias-pilulas" aria-label="Categorias rápidas">
       <ul>
-        <li><a href="#" class="ativo">Tênis</a></li>
-        <li><a href="#">Futebol</a></li>
-        <li><a href="#">Basquete</a></li>
-        <li><a href="#">Corrida</a></li>
-        <li><a href="#">Pilates</a></li>
-        <li><a href="#">Vôlei</a></li>
-        <li><a href="#">Pedal</a></li>
-        <li><a href="#">Beach Tênis</a></li>
-        <li><a href="#">Natação</a></li>
-        <li><a href="#">Ping Pong</a></li>
-        <li><a href="#">Tiro ao Alvo</a></li>
-        <li><a href="#">Artes Marciais</a></li>
-        <li><a href="#">Ciclismo</a></li>
-        <li><a href="#">Surf</a></li>
-        <li><a href="#">Golf</a></li>
+        <li><a href="Paginas/catalogo.html?categoria=tenis" class="ativo">Tênis</a></li>
+        <li><a href="Paginas/catalogo.html?categoria=futebol">Futebol</a></li>
+        <li><a href="Paginas/catalogo.html?categoria=basquete">Basquete</a></li>
+        <li><a href="Paginas/catalogo.html?categoria=corrida">Corrida</a></li>
+        <li><a href="Paginas/catalogo.html?categoria=pilates">Pilates</a></li>
+        <li><a href="Paginas/catalogo.html?categoria=volei">Vôlei</a></li>
+        <li><a href="Paginas/catalogo.html?categoria=padel">Padel</a></li>
+        <li><a href="Paginas/catalogo.html?categoria=beach-tenis">Beach Tênis</a></li>
+        <li><a href="Paginas/catalogo.html?categoria=natacao">Natação</a></li>
+        <li><a href="Paginas/catalogo.html?categoria=ping-pong">Ping Pong</a></li>
+        <li><a href="Paginas/catalogo.html?categoria=tiro-ao-alvo">Tiro ao Alvo</a></li>
+        <li><a href="Paginas/catalogo.html?categoria=artes-marciais">Artes Marciais</a></li>
+        <li><a href="Paginas/catalogo.html?categoria=ciclismo">Ciclismo</a></li>
+        <li><a href="Paginas/catalogo.html?categoria=surf">Surf</a></li>
+        <li><a href="Paginas/catalogo.html?categoria=golf">Golf</a></li>
         
       </ul>
     </nav>
@@ -58,26 +58,26 @@
       <h2>Encontre seu esporte</h2>
       <ul class="lista-esportes">
         <li>
-          <a href="#">
-            <img src="imagens/banner/banner.jpg" alt="Corrida">
+          <a href="Paginas/catalogo.html?categoria=corrida">
+            <img src="Assets/Imagens/Banner/banner.jpg" alt="Corrida">
             <span>Corrida</span>
           </a>
         </li>
         <li>
-          <a href="#">
-            <img src="imagens/futebol/futebol.jpg" alt="Futebol">
+          <a href="Paginas/catalogo.html?categoria=futebol">
+            <img src="Assets/Imagens/Futebol/futebol.jpg" alt="Futebol">
             <span>Futebol</span>
           </a>
         </li>
         <li>
-          <a href="#">
-            <img src="imagens/basquete/basquete.jpg" alt="Basquete">
+          <a href="Paginas/catalogo.html?categoria=basquete">
+            <img src="Assets/Imagens/Basquete/bola-de-basquete-oficial.jpg" alt="Basquete">
             <span>Basquete</span>
           </a>
         </li>
         <li>
-          <a href="#">
-            <img src="imagens/tenis/02.avif" alt="Tênis">
+          <a href="Paginas/catalogo.html?categoria=tenis">
+            <img src="Assets/Imagens/Tenis/raquete-de-tenis-profissional.jpg" alt="Tênis">
             <span>Tênis</span>
           </a>
         </li>
@@ -92,40 +92,40 @@
         <!-- Fileira 1 -->
         <article class="card-produto">
           <figure>
-            <img src="imagens/tenis/06.avif" alt="Tênis de corrida">
+            <a href="Paginas/detalhes.html"><img src="Assets/Imagens/Corrida/tenis-de-corrida-feminino.jpg" alt="Tênis de corrida"></a>
             <button type="button" class="btn-favorito" aria-label="Favoritar"><i class="bi bi-heart"></i></button>
           </figure>
-          <h3>Tênis Feminino Nike Air Max Excee</h3>
+          <h3><a href="Paginas/detalhes.html">Tênis Feminino Nike Air Max Excee</a></h3>
           <strong class="preco">R$ 299,99</strong>
           <button type="button" class="btn-adicionar">Adicionar</button>
         </article>
 
         <article class="card-produto">
           <figure>
-            <img src="imagens/futebol/01.webp" alt="Camiseta esportiva">
+            <a href="Paginas/detalhes.html"><img src="Assets/Imagens/Futebol/camisa-de-futebol-masculina.jpg" alt="Camiseta esportiva"></a>
             <button type="button" class="btn-favorito" aria-label="Favoritar"><i class="bi bi-heart"></i></button>
           </figure>
-          <h3>Camisa Seleção Brasileira 2026</h3>
+          <h3><a href="Paginas/detalhes.html">Camisa Seleção Brasileira 2026</a></h3>
           <strong class="preco">R$ 299,99</strong>
           <button type="button" class="btn-adicionar">Adicionar</button>
         </article>
 
         <article class="card-produto">
           <figure>
-            <img src="imagens/basquete/02.avif" alt="Short de treino">
+            <a href="Paginas/detalhes.html"><img src="Assets/Imagens/Basquete/regata-de-basquete-masculina.jpg" alt="Short de treino"></a>
             <button type="button" class="btn-favorito" aria-label="Favoritar"><i class="bi bi-heart"></i></button>
           </figure>
-          <h3>Regata Nike Los Angeles Lakes Masculina</h3>
+          <h3><a href="Paginas/detalhes.html">Regata Nike Los Angeles Lakes Masculina</a></h3>
           <strong class="preco">R$ 299,99</strong>
           <button type="button" class="btn-adicionar">Adicionar</button>
         </article>
 
         <article class="card-produto">
           <figure>
-            <img src="imagens/futebol/07.avif">
+            <a href="Paginas/detalhes.html"><img src="Assets/Imagens/Futebol/bola-de-futebol-profissional.jpg" alt="Bola de futebol"></a>
             <button type="button" class="btn-favorito" aria-label="Favoritar"><i class="bi bi-heart"></i></button>
           </figure>
-          <h3>Bola de Futebol Nike Academy - Branco</h3>
+          <h3><a href="Paginas/detalhes.html">Bola de Futebol Nike Academy - Branco</a></h3>
           <strong class="preco">R$ 119,99</strong>
           <button type="button" class="btn-adicionar">Adicionar</button>
         </article>
@@ -133,40 +133,40 @@
         <!-- Fileira 2 -->
         <article class="card-produto">
           <figure>
-            <img src="imagens/tenis/03.avif" alt="Tênis">
+            <a href="Paginas/detalhes.html"><img src="Assets/Imagens/Tenis/tenis-de-piso-rapido-masculino.jpg" alt="Tênis"></a>
             <button type="button" class="btn-favorito" aria-label="Favoritar"><i class="bi bi-heart"></i></button>
           </figure>
-          <h3>Tênis Unissex Adidas</h3>
+          <h3><a href="Paginas/detalhes.html">Tênis Unissex Adidas</a></h3>
           <strong class="preco">R$ 199,90</strong>
           <button type="button" class="btn-adicionar">Adicionar</button>
         </article>
 
         <article class="card-produto">
           <figure>
-            <img src="imagens/futebol/03.webp" alt="chuteira">
+            <a href="Paginas/detalhes.html"><img src="Assets/Imagens/Futebol/chuteira-de-campo-unissex.jpg" alt="chuteira"></a>
             <button type="button" class="btn-favorito" aria-label="Favoritar"><i class="bi bi-heart"></i></button>
           </figure>
-          <h3>Chuteira Adidas Campo Masculina JR9053</h3>
+          <h3><a href="Paginas/detalhes.html">Chuteira Adidas Campo Masculina JR9053</a></h3>
           <strong class="preco">R$ 359,90</strong>
           <button type="button" class="btn-adicionar">Adicionar</button>
         </article>
 
         <article class="card-produto">
           <figure>
-            <img src="imagens/futebol/06.webp" alt="Short do Brasil">
+            <a href="Paginas/detalhes.html"><img src="Assets/Imagens/Futebol/shorts-de-futebol-masculino.jpg" alt="Short do Brasil"></a>
             <button type="button" class="btn-favorito" aria-label="Favoritar"><i class="bi bi-heart"></i></button>
           </figure>
-          <h3>Calção Brasil I 2026 Nike Masculino</h3>
+          <h3><a href="Paginas/detalhes.html">Calção Brasil I 2026 Nike Masculino</a></h3>
           <strong class="preco">R$ 139,99</strong>
           <button type="button" class="btn-adicionar">Adicionar</button>
         </article>
 
         <article class="card-produto">
           <figure>
-            <img src="imagens/basquete/07.avif" alt="Boné Basquete">
+            <a href="Paginas/detalhes.html"><img src="Assets/Imagens/Basquete/faixa-de-cabeca-esportiva.jpg" alt="Boné Basquete"></a>
             <button type="button" class="btn-favorito" aria-label="Favoritar"><i class="bi bi-heart"></i></button>
           </figure>
-          <h3>Boné Golden State Warriors NBA Basic Preto</h3>
+          <h3><a href="Paginas/detalhes.html">Boné Golden State Warriors NBA Basic Preto</a></h3>
           <strong class="preco">R$ 121,49</strong>
           <button type="button" class="btn-adicionar">Adicionar</button>
         </article>
@@ -178,19 +178,19 @@
       <h2>Inspire-se e monte seu outfit</h2>
       <section class="grade-outfits">
         <article class="card-outfit">
-          <img src="imagens/outfit/corrida.jpg" alt="Para correr">
+          <img src="Assets/Imagens/Corrida/tenis-de-corrida-masculino.jpg" alt="Para correr">
           <h3>Para correr</h3>
           <p>Leveza a cada passo</p>
         </article>
 
         <article class="card-outfit">
-          <img src="#" alt="Para treinar">
+          <img src="Assets/Imagens/Pilates/colchonete-de-pilates.jpg" alt="Para treinar">
           <h3>Para treinar</h3>
           <p>Foco no movimento</p>
         </article>
 
         <article class="card-outfit">
-          <img src="#" alt="Para o dia a dia">
+          <img src="Assets/Imagens/Basquete/mochila-esportiva-basquete.jpg" alt="Para o dia a dia">
           <h3>Para o dia a dia</h3>
           <p>Conforto em todo lugar</p>
         </article>

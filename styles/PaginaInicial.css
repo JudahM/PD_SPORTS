@@ -149,7 +149,7 @@ body {
    ========================================= */
 .banner-hero {
   background: linear-gradient(180deg, rgba(10, 35, 55, 0.72) 0%, rgba(10, 15, 20, 0.9) 100%),
-              url('../imagens/banner/banner.jpg') center/cover no-repeat;
+              url('../Assets/Imagens/Banner/banner.jpg') center/cover no-repeat;
   color: var(--cor-primaria);
   padding: 72px 16px 28px;
   display: flex;
@@ -264,11 +264,22 @@ body {
   overflow: hidden;
 }
 
+.card-produto figure a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .card-produto figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   font-size: 0; /* esconde o texto alt caso a imagem ainda não exista */
+}
+
+.card-produto h3 a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .btn-favorito {
