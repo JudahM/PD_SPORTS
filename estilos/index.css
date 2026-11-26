@@ -449,3 +449,220 @@ body {
   color: var(--cor-primaria);
   text-decoration: none;
 }
+
+
+/* =========================================
+7. VERSÃO DESKTOP (TELAS >= 768px)
+   ========================================= */
+@media (min-width: 768px) {
+  /* --- Cabeçalho em linha única + Pílulas centralizadas --- */
+  .topo {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 24px 32px 16px;
+    display: grid;
+    grid-template-columns: auto minmax(280px, 520px) auto;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 24px;
+    column-gap: 24px;
+  }
+
+  /* Faz os filhos de .topo-superior (logo e ícones) participarem direto do grid do .topo */
+  .topo-superior {
+    display: contents;
+  }
+
+  .logo {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 24px;
+  }
+
+  .barra-busca {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    padding: 10px 14px;
+  }
+
+  .barra-busca input {
+    font-size: 13px;
+  }
+
+  .icones-acao {
+    grid-column: 3;
+    grid-row: 1;
+    gap: 20px;
+  }
+
+  .icones-acao a {
+    font-size: 22px;
+  }
+
+  .categorias-pilulas {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .categorias-pilulas ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 12px;
+    max-width: 760px;
+    margin: 0 auto;
+    overflow-x: visible;
+  }
+
+  .categorias-pilulas a {
+    padding: 6px 16px;
+    font-size: 12px;
+  }
+
+  /* --- Container central do conteúdo --- */
+  main {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* --- Seção de Produtos no Desktop --- */
+  .secao-produtos {
+    padding: 24px 0 48px;
+  }
+
+  .secao-produtos h2 {
+    font-size: var(--tamanho-h3);
+    line-height: var(--altura-linha-h3);
+    margin-bottom: 24px;
+  }
+
+  .grade-produtos {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px 24px;
+  }
+
+  .card-produto {
+    gap: 8px;
+  }
+
+  .card-produto figure {
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+  }
+
+  .btn-favorito {
+    top: 10px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .card-produto h3 {
+    font-size: 14px;
+    line-height: 20px;
+    min-height: 40px;
+    margin-top: 4px;
+  }
+
+  .card-produto .preco {
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  .btn-adicionar {
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+
+  /* --- Outras seções da Home caso use o mesmo CSS --- */
+  .banner-hero {
+    border-radius: 12px;
+    padding: 110px 48px 48px;
+    margin-top: 8px;
+  }
+
+  .banner-hero h1 {
+    font-size: var(--tamanho-h1);
+    line-height: var(--altura-linha-h1);
+    max-width: 480px;
+  }
+
+  .banner-hero p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .secao-esportes,
+  .secao-inspire {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .secao-esportes h2,
+  .secao-inspire h2 {
+    font-size: var(--tamanho-h3);
+    line-height: var(--altura-linha-h3);
+  }
+
+  .lista-esportes a,
+  .card-outfit h3 {
+    font-size: 14px;
+  }
+
+  .card-outfit p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  /* --- Rodapé Desktop (alinhado ao cabeçalho e main) --- */
+  .rodape {
+    padding: 40px 32px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .rodape hr {
+    display: none;
+  }
+
+  .rodape-base {
+    order: 1;
+    gap: 8px;
+  }
+
+  .rodape-base .marca {
+    font-size: 16px;
+  }
+
+  .rodape-base small,
+  .links-legais {
+    font-size: 12px;
+  }
+
+  .rodape-colunas {
+    order: 2;
+    display: flex;
+    gap: 80px;
+  }
+
+  .rodape nav h4 {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .rodape nav a {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1185px) {
+  .rodape {
+    padding-left: calc((100% - 1120px) / 2 + 32px);
+    padding-right: calc((100% - 1120px) / 2 + 32px);
+  }
+}
