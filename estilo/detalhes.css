@@ -1,0 +1,670 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;600;700;800&display=swap');
+
+:root {
+  /* Paleta do Design System */
+  --cor-primaria: #C6FF00;
+  --cor-preto: #111111;
+  --cor-branco: #FFFFFF;
+  --cor-cinza-fundo: #F4F4F4;
+  --cor-cinza-card: #E2E2E2;
+  --cor-cinza-claro: #D4D4D4;
+  --cor-cinza-medio: #C5C5C5;
+  --cor-cinza-escuro: #666666;
+
+  /* Fontes do Design System */
+  --fonte-paragrafo: 'Work Sans', sans-serif;
+  --fonte-destaque: 'Space Mono', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-destaque);
+  background-color: var(--cor-branco);
+  color: var(--cor-preto);
+  width: 100%;
+}
+
+/* =========================================
+1. CABEÇALHO E NAVEGAÇÃO
+   ========================================= */
+.topo {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: var(--cor-branco);
+}
+
+.topo-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--fonte-paragrafo);
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--cor-preto);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.icones-acao {
+  display: flex;
+  gap: 16px;
+}
+
+.icones-acao a {
+  color: var(--cor-preto);
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.barra-busca {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--cor-cinza-fundo);
+  border: 1px solid var(--cor-cinza-claro);
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.barra-busca i {
+  font-size: 14px;
+  color: var(--cor-preto);
+}
+
+.barra-busca input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-family: var(--fonte-destaque);
+  font-size: 11px;
+  color: var(--cor-preto);
+  outline: none;
+}
+
+.categorias-pilulas ul {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.categorias-pilulas ul::-webkit-scrollbar {
+  display: none;
+}
+
+.categorias-pilulas a {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid var(--cor-preto);
+  border-radius: 999px;
+  font-family: var(--fonte-paragrafo);
+  font-size: 10px;
+  color: var(--cor-preto);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.categorias-pilulas a.ativo {
+  background-color: var(--cor-primaria);
+  font-weight: 700;
+}
+
+/* =========================================
+2. CONTEÚDO PRINCIPAL E BREADCRUMB
+   ========================================= */
+.conteudo-produto {
+  padding: 0 16px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  font-size: 10px;
+  color: var(--cor-cinza-escuro);
+}
+
+.breadcrumb li + li::before {
+  content: "/";
+  margin-right: 6px;
+  color: var(--cor-cinza-escuro);
+}
+
+.breadcrumb a {
+  color: var(--cor-cinza-escuro);
+  text-decoration: none;
+}
+
+/* =========================================
+3. GALERIA DE IMAGENS
+   ========================================= */
+.galeria-produto {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.foto-principal {
+  position: relative;
+  background-color: var(--cor-cinza-card);
+  border-radius: 10px;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.foto-principal img {
+  width: 85%;
+  height: auto;
+  object-fit: contain;
+}
+
+.contador-fotos {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: var(--cor-branco);
+  color: var(--cor-preto);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.miniaturas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  list-style: none;
+}
+
+.miniaturas button {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--cor-cinza-card);
+  border: 1.5px solid transparent;
+  border-radius: 8px;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.miniaturas button.ativa {
+  border-color: var(--cor-preto);
+}
+
+.miniaturas img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* =========================================
+4. INFORMAÇÕES DO PRODUTO
+   ========================================= */
+.cabecalho-produto {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meta-produto {
+  font-size: 10px;
+  color: var(--cor-cinza-escuro);
+  letter-spacing: 0.5px;
+}
+
+.cabecalho-produto h1 {
+  font-family: var(--fonte-paragrafo);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.resumo-estrelas {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+}
+
+.estrelas {
+  color: var(--cor-preto);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.subtitulo-produto {
+  font-size: 11px;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+.destaques-produto {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.destaques-produto li::before {
+  content: "- ";
+}
+
+/* =========================================
+5. CAIXA DE COMPRA E SELETORES
+   ========================================= */
+.caixa-compra {
+  background-color: var(--cor-cinza-card);
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-preco {
+  background-color: var(--cor-preto);
+  color: var(--cor-branco);
+  border-radius: 8px;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.valores {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.valores del {
+  font-size: 10px;
+  color: var(--cor-cinza-medio);
+}
+
+.preco-atual {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--cor-primaria);
+}
+
+.valores small {
+  font-size: 10px;
+  color: var(--cor-branco);
+}
+
+.tag-desconto {
+  background-color: var(--cor-primaria);
+  color: var(--cor-preto);
+  font-family: var(--fonte-paragrafo);
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Seletores de Cor e Tamanho */
+.seletor-cor,
+.seletor-tamanho,
+.campo-cep {
+  border: none;
+}
+
+.seletor-cor legend,
+.seletor-tamanho legend {
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+
+.seletor-cor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.seletor-cor legend {
+  width: 100%;
+}
+
+.opcao-cor {
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.opcao-cor input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.opcao-cor span {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--cor-branco);
+  outline: 1px solid var(--cor-cinza-escuro);
+  display: inline-block;
+}
+
+.opcao-cor input:checked + span {
+  outline: 2px solid var(--cor-preto);
+}
+
+.cor-cinza span {
+  background-color: #8C8C8C;
+}
+
+.cor-preto span {
+  background-color: var(--cor-preto);
+}
+
+.cor-branco span {
+  background-color: var(--cor-branco);
+}
+
+.grade-tamanhos {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  list-style: none;
+}
+
+.grade-tamanhos label {
+  display: block;
+  cursor: pointer;
+}
+
+.grade-tamanhos input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.grade-tamanhos span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  background-color: var(--cor-branco);
+  border: 1px solid var(--cor-cinza-claro);
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--cor-preto);
+}
+
+.grade-tamanhos input:checked + span {
+  background-color: var(--cor-preto);
+  color: var(--cor-primaria);
+  border-color: var(--cor-preto);
+}
+
+.link-medidas,
+.link-cep {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 10px;
+  color: var(--cor-cinza-escuro);
+  text-decoration: underline;
+}
+
+/* Frete */
+.form-frete {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-frete label {
+  font-family: var(--fonte-paragrafo);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.campo-cep {
+  display: flex;
+  gap: 8px;
+}
+
+.campo-cep input {
+  flex: 1;
+  background-color: var(--cor-branco);
+  border: 1px solid var(--cor-cinza-claro);
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-family: var(--fonte-destaque);
+  font-size: 11px;
+  outline: none;
+}
+
+.campo-cep button {
+  background-color: var(--cor-branco);
+  color: var(--cor-preto);
+  border: 1px solid var(--cor-preto);
+  border-radius: 6px;
+  padding: 0 14px;
+  font-family: var(--fonte-paragrafo);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Botões Principais */
+.acoes-compra {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-primario,
+.btn-secundario {
+  width: 100%;
+  padding: 13px;
+  border-radius: 6px;
+  font-family: var(--fonte-paragrafo);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-primario {
+  background-color: var(--cor-primaria);
+  color: var(--cor-preto);
+  border: none;
+}
+
+.btn-secundario {
+  background-color: var(--cor-branco);
+  color: var(--cor-preto);
+  border: 1px solid var(--cor-preto);
+}
+
+.info-entrega {
+  font-size: 10px;
+  color: var(--cor-cinza-escuro);
+  line-height: 1.4;
+}
+
+/* =========================================
+6. SOBRE O PRODUTO E AVALIAÇÕES
+   ========================================= */
+.sobre-produto,
+.avaliacoes-clientes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sobre-produto h2,
+.avaliacoes-clientes h2 {
+  font-family: var(--fonte-paragrafo);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.sobre-produto p {
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.nota-geral {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nota-numero {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.nota-detalhe {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nota-detalhe small {
+  font-size: 10px;
+  color: var(--cor-cinza-escuro);
+}
+
+.metricas-avaliacao {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.metricas-avaliacao li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metricas-avaliacao label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+}
+
+.metricas-avaliacao progress {
+  width: 100%;
+  height: 4px;
+  appearance: none;
+  border: none;
+  background-color: var(--cor-cinza-claro);
+}
+
+.metricas-avaliacao progress::-webkit-progress-bar {
+  background-color: var(--cor-cinza-claro);
+}
+
+.metricas-avaliacao progress::-webkit-progress-value {
+  background-color: var(--cor-preto);
+}
+
+.metricas-avaliacao progress::-moz-progress-bar {
+  background-color: var(--cor-preto);
+}
+
+/* =========================================
+   6. RODAPÉ
+   ========================================= */
+.rodape {
+  background-color: var(--cor-preto);
+  color: var(--cor-branco);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.rodape-colunas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.rodape nav h4 {
+  font-family: var(--fonte-paragrafo);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--cor-primaria);
+  margin-bottom: 10px;
+}
+
+.rodape nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rodape nav a {
+  font-family: var(--fonte-paragrafo);
+  color: var(--cor-cinza-medio);
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.rodape hr {
+  border: none;
+  border-top: 1px solid #444444;
+}
+
+.rodape-base {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rodape-base .marca {
+  font-family: var(--fonte-paragrafo);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cor-primaria);
+}
+
+.rodape-base small {
+  font-family: var(--fonte-paragrafo);
+  font-size: 10px;
+  color: var(--cor-primaria);
+}
+
+.links-legais {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--fonte-paragrafo);
+  font-size: 10px;
+  color: var(--cor-primaria);
+}
+
+.links-legais a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+}
