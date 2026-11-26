@@ -1,11 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PD Sports</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="estilos/index.css">
 </head>
 <body>
-    
+ <header class="topo">
+    <section class="topo-superior">
+      <a href="#" class="logo">PD SPORTS</a>
+      <nav class="icones-acao" aria-label="Menu do usuário">
+        <a href="#" aria-label="Favoritos"><i class="bi bi-heart"></i></a>
+        <a href="#" aria-label="Minha conta"><i class="bi bi-person"></i></a>
+        <a href="#" aria-label="Carrinho"><i class="bi bi-cart2"></i></a>
+      </nav>
+    </section>
+
+    <form class="barra-busca" role="search">
+      <i class="bi bi-search"></i>
+      <input type="search" placeholder="O que você está procurando?" aria-label="Buscar produtos">
+    </form>
+
+    <nav class="categorias-pilulas" aria-label="Categorias rápidas">
+      <ul>
+        <li><a href="#" class="ativo">Tênis</a></li>
+        <li><a href="#">Futebol</a></li>
+        <li><a href="#">Basquete</a></li>
+        <li><a href="#">Corrida</a></li>
+        <li><a href="#">Pilates</a></li>
+        <li><a href="#">Vôlei</a></li>
+        <li><a href="#">Pedal</a></li>
+        <li><a href="#">Beach Tênis</a></li>
+        <li><a href="#">Natação</a></li>
+        <li><a href="#">Ping Pong</a></li>
+        <li><a href="#">Tiro ao Alvo</a></li>
+        <li><a href="#">Artes Marciais</a></li>
+        <li><a href="#">Ciclismo</a></li>
+        <li><a href="#">Surf</a></li>
+        <li><a href="#">Golf</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- BANNER PRINCIPAL -->
+    <section class="banner-hero">
+      <h1>Seu próximo desafio começa aqui.</h1>
+      <p>Tudo para se movimentar, do treino ao dia a dia.</p>
+      <a href="#destaques" class="btn-primario">Ver produtos</a>
+    </section>
+
+    <!-- ENCONTRE SEU ESPORTE -->
+    <section class="secao-esportes">
+      <h2>Encontre seu esporte</h2>
+      <ul class="lista-esportes">
+        <li>
+          <a href="#">
+            <img src="imagens/banner/banner.jpg" alt="Corrida">
+            <span>Corrida</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="imagens/futebol/futebol.jpg" alt="Futebol">
+            <span>Futebol</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="imagens/basquete/basquete.jpg" alt="Basquete">
+            <span>Basquete</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="imagens/tenis/02.avif" alt="Tênis">
+            <span>Tênis</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- PRODUTOS EM DESTAQUE -->
+    <section id="destaques" class="secao-produtos">
+      <h2>Produtos em destaque</h2>
+
+      <section class="grade-produtos">
+        <!-- Fileira 1 -->
+        <article class="card-produto">
+          <figure>
+            <img src="imagens/tenis/06.avif" alt="Tênis de corrida">
+            <button type="button" class="btn-favorito" aria-label="Favoritar"><i class="bi bi-heart"></i></button>
+          </figure>
+          <h3>Tênis Feminino Nike Air Max Excee</h3>
+          <strong class="preco">R$ 299,99</strong>
+          <button type="button" class="btn-adicionar">Adicionar</button>
+        </article>
+
+        <article class="card-produto">
+          <figure>
+            <img src="imagens/futebol/01.webp" alt="Camiseta esportiva">
+            <button type="button" class="btn-favorito" aria-label="Favoritar"><i class="bi bi-heart"></i></button>
+          </figure>
+          <h3>Camisa Seleção Brasileira 2026</h3>
+          <strong class="preco">R$ 299,99</strong>
+          <button type="button" class="btn-adicionar">Adicionar</button>
+        </article>
+
+        <article class="card-produto">
+          <figure>
+            <img src="imagens/basquete/02.avif" alt="Short de treino">
+            <button type="button" class="btn-favorito" aria-label="Favoritar"><i class="bi bi-heart"></i></button>
+          </figure>
+          <h3>Regata Nike Los Angeles Lakes Masculina</h3>
+          <strong class="preco">R$ 299,99</strong>
+          <button type="button" class="btn-adicionar">Adicionar</button>
+        </article>
+
+        <article class="card-produto">
+          <figure>
+            <img src="imagens/futebol/07.avif">
+            <button type="button" class="btn-favorito" aria-label="Favoritar"><i class="bi bi-heart"></i></button>
+          </figure>
+          <h3>Bola de Futebol Nike Academy - Branco</h3>
+          <strong class="preco">R$ 119,99</strong>
+          <button type="button" class="btn-adicionar">Adicionar</button>
+        </article>
+
+        <!-- Fileira 2 -->
+        <article class="card-produto">
+          <figure>
+            <img src="imagens/tenis/03.avif" alt="Tênis">
+            <button type="button" class="btn-favorito" aria-label="Favoritar"><i class="bi bi-heart"></i></button>
+          </figure>
+          <h3>Tênis Unissex Adidas</h3>
+          <strong class="preco">R$ 199,90</strong>
+          <button type="button" class="btn-adicionar">Adicionar</button>
+        </article>
+
+        <article class="card-produto">
+          <figure>
+            <img src="imagens/futebol/03.webp" alt="chuteira">
+            <button type="button" class="btn-favorito" aria-label="Favoritar"><i class="bi bi-heart"></i></button>
+          </figure>
+          <h3>Chuteira Adidas Campo Masculina JR9053</h3>
+          <strong class="preco">R$ 359,90</strong>
+          <button type="button" class="btn-adicionar">Adicionar</button>
+        </article>
+
+        <article class="card-produto">
+          <figure>
+            <img src="imagens/futebol/06.webp" alt="Short do Brasil">
+            <button type="button" class="btn-favorito" aria-label="Favoritar"><i class="bi bi-heart"></i></button>
+          </figure>
+          <h3>Calção Brasil I 2026 Nike Masculino</h3>
+          <strong class="preco">R$ 139,99</strong>
+          <button type="button" class="btn-adicionar">Adicionar</button>
+        </article>
+
+        <article class="card-produto">
+          <figure>
+            <img src="imagens/basquete/07.avif" alt="Boné Basquete">
+            <button type="button" class="btn-favorito" aria-label="Favoritar"><i class="bi bi-heart"></i></button>
+          </figure>
+          <h3>Boné Golden State Warriors NBA Basic Preto</h3>
+          <strong class="preco">R$ 121,49</strong>
+          <button type="button" class="btn-adicionar">Adicionar</button>
+        </article>
+      </section>
+    </section>
+
+    <!-- INSPIRE-SE E MONTE SEU OUTFIT -->
+    <section class="secao-inspire">
+      <h2>Inspire-se e monte seu outfit</h2>
+      <section class="grade-outfits">
+        <article class="card-outfit">
+          <img src="imagens/outfit/corrida.jpg" alt="Para correr">
+          <h3>Para correr</h3>
+          <p>Leveza a cada passo</p>
+        </article>
+
+        <article class="card-outfit">
+          <img src="#" alt="Para treinar">
+          <h3>Para treinar</h3>
+          <p>Foco no movimento</p>
+        </article>
+
+        <article class="card-outfit">
+          <img src="#" alt="Para o dia a dia">
+          <h3>Para o dia a dia</h3>
+          <p>Conforto em todo lugar</p>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <section class="rodape-colunas">
+      <nav aria-label="Minha Conta">
+        <h4>Minha Conta</h4>
+        <ul>
+          <li><a href="#">Meus pedidos</a></li>
+          <li><a href="#">Meus dados</a></li>
+          <li><a href="#">Favoritos</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Redes Sociais">
+        <h4>Redes Sociais</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <hr>
+
+    <section class="rodape-base">
+      <p class="marca">LOJA ESPORTE</p>
+      <small>© 2026 Loja Esporte. Todos os direitos reservados.</small>
+      <nav class="links-legais" aria-label="Links legais">
+        <a href="#">Privacidade</a>
+        <span>•</span>
+        <a href="#">Termos de uso</a>
+      </nav>
+    </section>
+  </footer>
 </body>
 </html>
